@@ -4056,7 +4056,7 @@
 </div>
 </div>
 </div>
-<div class="col-md-4 col-lg-4 header__right">
+<div class="col-md-4 col-lg-4 header__right header__right__fixed">
 <div class="header__auth">
 <div class="header__buttons">
 <a class="header__button-item hide-scroll" href="http://stn.com.ru/#">
@@ -4273,6 +4273,14 @@
 	width:100%;
 	top:0px;
   }
+  
+  @media (max-width: 550px) {
+    .header__right__fixed {
+  margin-right: 3px !important;
+  position: unset !important;
+ 
+}
+}
   </style>
   
   
@@ -4314,13 +4322,15 @@ $(window).scroll(function() {
         });
 		$('.header__button-item').css({
             'margin-right': '0px',
-			'margin-left':'6px'
+			'margin-left':'12px'
 			
         });
 		$('.header__callback').css({
             'width': 'auto',
 			'float': 'left',
-			'margin-top':'5px'
+			'margin-top':'5px',
+			'font-size':'12px',
+			'padding':'7px 15px'
 			
         });
 		
@@ -4366,7 +4376,9 @@ $(window).scroll(function() {
 		$('.header__callback').css({
             'width': '100%',
 			'float': 'none',
-			'margin-top':'0px'
+			'margin-top':'0px',
+			'font-size':'14px',
+			'padding':'6px 15px'
 			
         });
     }
